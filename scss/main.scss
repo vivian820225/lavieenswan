@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+$gold: #D1B982;
+$black: #181818;
+$grey: #9E9F9F;
+$light-grey: #E2E2E2;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $black;
+  font-family: 'Noto Serif TC', "微軟正黑體", "Microsoft JhengHei", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+picture {
+  max-width: 100%;
+}
+
+.white {
+  color: #FFF;
+}
+
+.gold {
+  color: $gold;
+}
+
+.relative {
+  position: relative;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-inline {
+    display: inline-block;
+  }
+  .d-md-block {
+    display: block;
+  }
+}
+
+.align-center {
+  align-items: center;
+}  
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.font-en {
+  font-family: 'Cinzel', serif;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: bold;
+  line-height: 1.4;
+
+  &.large {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  &.middle {
+    font-size: clamp(1.25rem, 5vw, 2.25rem);
+  }
+
+  &.small {
+    font-size: clamp(0.8rem, 4vw, 1.25rem);
+  }
+}
+
+.title-en {
+  @extend .font-en;
+
+  margin-bottom: 0.5rem;
+  color: $gold;
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
+  font-weight: normal;
+}
+
+.subtitle {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.para {
+  font-size: clamp(0.75rem, 2vw, 1.125rem);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.img-tag {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: #FFF;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 3rem;
+  }
+
+  .title-en {
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    margin-bottom: 1.25rem;
+  }
+
+  .img-tag {
+    font-size: 1rem;
+  }
+}
+
+.deco-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  margin: 0;
+
+  &-gold {
+    @extend .deco-line;
+
+    background-color: $gold;
+  }
+}
+
+@media (min-width: 768px) {
+  .deco-line {
+    height: 2px;
+  }
+}
+
+@import "_swiper.scss";
+@import "_section.scss";
+@import "_reservation.scss";

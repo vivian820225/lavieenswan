@@ -1,0 +1,214 @@
+html,body{
+    height: 100%;
+}
+.content-wraper{
+    min-height: 100%;
+    position: relative;
+}
+main{
+    padding-bottom: 45px;
+}
+.footer{
+    height: 45px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    max-width: 100vw;
+    width: 100%;
+}
+.copyright{
+    line-height: 1.8;
+}
+.header{
+    max-width: 100vw;
+}
+
+
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    height: 70px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 6.86px 0.14px rgba(0,0,0,.1);
+}
+.nav-ml{
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.bg-main{
+    background-image: url(../img/thanku.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}
+
+.hiyes-kv{
+    position: relative;
+    padding-top: 70px;
+    background-color: #fafafa;
+}
+.hiyes-title{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: 20%;
+}
+.brand{
+    font-style:italic;
+    margin-right: 3%;
+    position: relative;
+    top: -50px;
+    /* margin-top: 60px; */
+}
+.sticky.mt{
+    margin-top: -25px;
+}
+
+.hr--transparent-10 {
+    margin: 0;
+    border: 0;
+    height: 1px;
+    background-color: transparent;
+    color: transparent;
+    height: 10px;
+}
+.hr--transparent-20 {
+    margin: 0;
+    border: 0;
+    height: 1px;
+    background-color: transparent;
+    color: transparent;
+    height: 20px;
+}
+.hr--transparent-40 {
+    margin: 0;
+    border: 0;
+    height: 1px;
+    background-color: transparent;
+    color: transparent;
+    height: 40px;
+}
+
+/* fonts size */
+.hiyes-font--1{
+    font-size: 50px;
+}
+.hiyes-font--2{
+    font-size: 35px;
+}
+.hiyes-font--3{
+    font-size: 24px;
+}
+.hiyes-font--4{
+    font-size: 20px;
+}
+.hiyes-font--5{
+    font-size: 16px;
+}
+.hiyes-font--6{
+    font-size: 14px;
+}
+
+/* button style */
+.hiyes-btn{
+    display: inline-block;
+    width: 320px;
+    min-width: 10rem;
+    max-width: 100%;
+    padding: 10px 30px;
+    margin: 5px 10px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 1px solid #5f91c2;
+}
+.hiyes-btn--color1{
+    background-color: #5f91c2;
+    color: #ffffff;
+}
+.hiyes-btn--color2{
+    background-color: #ffffff;
+    color: #5f91c2;
+}
+.hiyes-btn--color1:hover{
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+/* color style */
+.color-1{
+    color: #5f91c2;
+}
+.color-2{
+    color: #ffffff;
+}
+.color-3{
+    color: #818181;
+}
+.color-4{
+    color: red;
+}
+
+@media screen and (max-width: 991px) {
+    .nav-ml{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .bg-main{
+        background-image: url(../img/thanku-mob.jpg);
+    }
+    .hiyes-title{
+        margin-top: 20%;
+        margin-left: -100px;
+        left:25.5%;
+        text-align: center;
+    }
+    .brand{
+        text-align: center;
+        margin-top: -80px;
+    }
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+    }
+
+    /* fonts size */
+    .hiyes-font--1{
+        font-size: 32px;
+    }
+    .hiyes-font--2{
+        font-size: 24px;
+    }
+    .hiyes-font--3{
+        font-size: 16px;
+    }
+    .hiyes-font--4{
+        font-size: 18px;
+    }
+    .hiyes-font--5{
+        font-size: 16px;
+    }
+    .hiyes-font--6{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .hiyes-font--1{
+        font-size: 30px;
+    }
+    .hiyes-font--2{
+        font-size: 22px;
+    }
+    .hiyes-btn{
+        width: 300px;
+    }
+    .hiyes-title{
+        left: 30%;
+    }
+}
