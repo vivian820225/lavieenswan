@@ -33,6 +33,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    white-space: nowrap;
   }
 
   .middle {
@@ -119,6 +120,10 @@
       position: absolute;
       top: 8rem;
       left: 4rem;
+    }
+
+    .para {
+      max-width: 520px;
     }
   }
 }
@@ -207,6 +212,10 @@
       text-align: left;
     }
 
+    .para {
+      max-width: 520px;
+    }
+
     .circle-group {
       display: grid;
       grid-template-columns: repeat(4, 150px);
@@ -289,11 +298,221 @@
       align-self: center;
       flex: 0 0 35%;
       max-width: 35%;
+      min-width: 380px;
       padding: 4rem;
     }
 
     .title {
       white-space: initial;
+    }
+  }
+}
+
+.s5 {
+  min-height: auto;
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    color: $gold;
+    font-size: clamp(1.25rem, 4vw, 2.2rem);
+    margin-bottom: 0;
+    span {
+      margin-left: 4px;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .works-title {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: $gold;
+    font-size: clamp(0.75rem, 3vw, 1.25rem);
+    + .para {
+      line-height: 1.4;
+    }
+  }
+
+  .deco-line-gold {
+    width: auto;
+    flex: 1;
+    margin: 16px 0 16px 10px;
+    height: 1px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    margin-right: 1rem;
+  }
+
+  .works-img-wrapper {
+    margin-top: 1rem;
+    position: relative;
+
+    .works-img {
+      position: relative;
+      z-index: 1;
+    }
+
+    .img-tag {
+      z-index: 1;
+    }
+
+    .border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $gold;
+      top: 8px;
+      left: 8px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .s5 {
+    min-height: 100vh;
+    
+    .swiper-slide {
+      padding: 0;
+      flex-direction: row;
+    }
+
+    .title {
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      top: -120px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 35%;
+      max-width: 35%;
+      min-width: 380px;
+      padding: 3.2rem;
+    }
+
+    .content-wrapper {
+      flex-direction: column;
+      max-width: 360px;
+      border: 1px solid $gold;
+      margin-bottom: 0;
+      padding: 4rem 2rem 2rem 2rem;
+      position: relative;
+      transform: translateY(4vw);
+    }
+
+    .works-title {
+      + .para {
+        line-height: 1.8;
+      }
+    }
+
+
+    .deco-line-gold {
+      margin: 24px 0 24px 24px;
+    }
+  }
+
+
+  .works-grid {
+    display: grid;
+    flex: 1;
+    max-width: 65%;
+    height: 100vh;
+    max-height: 100vh;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    &.d1 {
+      grid-template-areas:
+        "G1 G1 G4 G4"
+        "G2 G2 G4 G4"
+        "G3 G3 G4 G4";
+    }
+
+    &.d2 {
+      grid-template-areas:
+        "G1 G1 G2 G2"
+        "G1 G1 G3 G3"
+        "G4 G4 G4 G4";
+    }
+
+    &.d3 {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        "G1 G1 G2 G2"
+        "G1 G1 G2 G2"
+        "G3 G3 G4 G4"
+        "G3 G3 G4 G4";
+    }
+    
+    &.d4 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "G1 G1 G1"
+        "G2 G3 G4"
+        "G2 G3 G4";
+    }
+  }
+
+  .g1 {
+    grid-area: G1;
+  }
+
+  .g2 {
+    grid-area: G2;
+  }
+
+  .g3 {
+    grid-area: G3;
+  }
+
+  .g4 {
+    grid-area: G4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .s5 {
+    .title {
+      line-height: 1.8;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      top: -150px;
+    }
+
+    .content-wrapper {
+      padding: 4rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .content {
+      padding: 4rem;
     }
   }
 }
@@ -393,16 +612,21 @@
     }
 
     .content {
-      max-width: 40vw;
+      width: 40vw;
+      max-width: 620px;
+      min-width: 520px;
       margin: 0;
       align-items: flex-start;
       position: absolute;
-      top: 8rem;
-      left: 4rem;
+      top: 6rem;
+      left: 0;
+      padding: 2rem 4rem 2rem 8rem;
+
+      &.white {
+        color: #FFF;
+        background-color: rgba($black, .5);
+      }
     }
 
-    .white {
-      color: #FFF;
-    }
   }
 }

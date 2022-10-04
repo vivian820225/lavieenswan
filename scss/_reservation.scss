@@ -7,6 +7,12 @@
     align-items: flex-start;
     justify-content: center;
   }
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
 }
 
 @media (min-width: 768px) {
@@ -31,12 +37,6 @@
 
   .table {
     margin-bottom: 2rem;
-  }
-
-  .title {
-    font-size: 30px;
-    margin-bottom: 1rem;
-    color: #fff;
   }
 
   .table > thead > tr > th {
@@ -105,6 +105,9 @@
 }
 
 .form-check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 1.5rem;
   color: #fff;
   font-weight: normal;
@@ -149,6 +152,10 @@
 
 @media (max-width: 1024px) {
   .reservation {
+    .title {
+      font-size: 22px;
+      text-align: left;
+    }
     .d-flex {
       padding: 2rem 1rem;
       flex-direction: column;
@@ -171,10 +178,6 @@
       .table {
         margin-bottom: 1rem;
       }
-      .title {
-        font-size: 22px;
-        text-align: left;
-      }
       .table > thead > tr > th {
         padding: 0;
       }
@@ -190,7 +193,7 @@
         flex-direction: row;
         align-items: stretch;
         padding: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         .form-control {
           margin-right: 5px;
         }
@@ -206,33 +209,65 @@
     }
 
     .intro {
-      padding: 0 15px;
       text-align: center;
       
       .title,
       .para {
+        margin: 0;
         text-align: center;
+      }
+    }
+
+    .contact-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 2px;
+        background-color: #FFF;
+        position: absolute;
+        bottom: 0;
+      }
+
+      .title,
+      .para {
+        font-size: 1.5rem;
       }
     }
   }
 
   .form-wrapper {
+    .form-title {
+      text-align: center;
+      padding-bottom: 8px;
+    }
     .form-control-wrapper {
       margin-bottom: 0;
     }
     .form-control,
     .btn,
     .btn-secondary {
-      height: 56px;
+      height: 48px;
     }
+  }
+
+  .map-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
 @media (max-width: 480px) {
   .reservation {
-    .intro {
-      padding: 0 15px;
-    }
+
   }
   .form-title {
     margin: 0;
@@ -260,6 +295,7 @@
 
 // Google Map
 .google-map {
+  width: 100%;
   max-width: 100%;
   height: 30vh;
   max-height: 200px;

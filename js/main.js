@@ -22,6 +22,18 @@ const swiperS4 = new Swiper("#swiper-s4", {
   },
 });
 
+const swiperS5 = new Swiper("#swiper-s5", {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: "#swiper-s5 .swiper-button-next",
+    prevEl: "#swiper-s5 .swiper-button-prev",
+  },
+});
+
 const swiperS6 = new Swiper("#swiper-s6", {
   loop: true,
   autoplay: {
