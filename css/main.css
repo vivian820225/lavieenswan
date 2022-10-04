@@ -312,6 +312,10 @@ picture {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
+.s1 .title,
+.s1 .title-en {
+  white-space: nowrap;
+}
 
 @media (min-width: 768px) {
   .s1 .content {
@@ -892,6 +896,9 @@ picture {
 .s7 .swiper-slide img {
   min-height: 220px;
 }
+.s7 .title {
+  text-align: center;
+}
 .s7 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -918,6 +925,9 @@ picture {
   }
   .s7 .swiper-slide img {
     height: 100vh;
+  }
+  .s7 .title {
+    text-align: left;
   }
   .s7 .content {
     width: 40vw;
