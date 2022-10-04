@@ -373,7 +373,7 @@ picture {
   min-height: auto;
 }
 .s3 .img-bg img {
-  max-height: clamp(220px, 30vh, 450px);
+  height: auto;
   margin: 0 auto;
 }
 .s3 .border {
@@ -413,6 +413,31 @@ picture {
   margin: 0 auto 1rem auto;
   max-width: 100%;
 }
+.s3 .img-flag {
+  max-width: 26px;
+  height: auto;
+}
+.s3 .img-durgo {
+  max-width: 78px;
+  height: auto;
+}
+.s3 .d-flex {
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.s3 .d-flex .title,
+.s3 .d-flex .title-en,
+.s3 .d-flex .subtitle {
+  margin: 0;
+}
+.s3 .d-flex .title.white,
+.s3 .d-flex .title-en.white,
+.s3 .d-flex .subtitle.white {
+  color: #181818;
+}
+.s3 .d-none {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .s3 {
@@ -442,6 +467,25 @@ picture {
   }
   .s3 .content.right {
     right: 8rem;
+  }
+  .s3 .content.center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .s3 .content.center .para {
+    margin-top: 2rem;
   }
   .s3 .title {
     text-align: left;
@@ -488,6 +532,19 @@ picture {
     margin: 0 auto 3rem 0;
     justify-self: flex-start;
     background-color: #D1B982;
+  }
+  .s3 .img-flag {
+    max-width: 52px;
+  }
+  .s3 .img-durgo {
+    max-width: 138px;
+  }
+  .s3 .d-flex {
+    gap: 16px;
+  }
+  .s3 .d-flex .title.white,
+.s3 .d-flex .title-en.white {
+    color: #FFF;
   }
 }
 .s4 {
@@ -865,7 +922,7 @@ picture {
   .s7 .content {
     width: 40vw;
     max-width: 620px;
-    min-width: 520px;
+    min-width: 560px;
     margin: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
