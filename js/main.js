@@ -1,13 +1,15 @@
-const swiperS3 = new Swiper('#swiper-s3', {
+AOS.init();
+
+const swiperS3 = new Swiper("#swiper-s3", {
   loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
   navigation: {
-    nextEl: '#swiper-s3 .swiper-button-next',
-    prevEl: '#swiper-s3 .swiper-button-prev',
-  }
+    nextEl: "#swiper-s3 .swiper-button-next",
+    prevEl: "#swiper-s3 .swiper-button-prev",
+  },
 });
 
 const swiperS4 = new Swiper("#swiper-s4", {
