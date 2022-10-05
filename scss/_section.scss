@@ -13,6 +13,28 @@
   }
 }
 
+.pattern-g {
+  background-image: url('../images/patten-g-m.png');
+  background-repeat: repeat;
+}
+
+.pattern-r {
+  background-image: url('../images/patten-r-m.png');
+  background-repeat: repeat;
+}
+
+@media (min-width: 768px) {
+  .pattern-g {
+    background-image: url('../images/patten-g.png');
+  }
+
+  .pattern-r {
+    background-image: url('../images/patten-r.png');
+  }
+}
+
+
+
 .s0 {
   color: #FFF;
 
@@ -488,6 +510,7 @@
       margin-bottom: 0;
       padding: 4rem 2rem 2rem 2rem;
       position: relative;
+      background-color: #FFF;
       transform: translateY(4vw);
     }
 
