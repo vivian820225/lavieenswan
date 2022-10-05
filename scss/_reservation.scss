@@ -210,8 +210,12 @@
 
     .intro {
       text-align: center;
-      
-      .title,
+
+      .title {
+        text-align: center;
+        margin-bottom: 1rem;  
+      }
+
       .para {
         margin: 0;
         text-align: center;
@@ -235,6 +239,10 @@
         background-color: #FFF;
         position: absolute;
         bottom: 0;
+      }
+
+      .title {
+        margin-bottom: 0;
       }
 
       .title,

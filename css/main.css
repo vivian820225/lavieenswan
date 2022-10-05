@@ -439,7 +439,7 @@ picture {
 .s3 .d-flex .subtitle.white {
   color: #181818;
 }
-.s3 .d-none {
+.s3 .d-md-none {
   display: none;
 }
 
@@ -549,6 +549,9 @@ picture {
   .s3 .d-flex .title.white,
 .s3 .d-flex .title-en.white {
     color: #FFF;
+  }
+  .s3 .d-md-none {
+    display: block;
   }
 }
 .s4 {
@@ -1190,8 +1193,11 @@ picture {
   .reservation .intro {
     text-align: center;
   }
-  .reservation .intro .title,
-.reservation .intro .para {
+  .reservation .intro .title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .reservation .intro .para {
     margin: 0;
     text-align: center;
   }
@@ -1218,6 +1224,9 @@ picture {
     background-color: #FFF;
     position: absolute;
     bottom: 0;
+  }
+  .reservation .contact-content .title {
+    margin-bottom: 0;
   }
   .reservation .contact-content .title,
 .reservation .contact-content .para {

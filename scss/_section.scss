@@ -204,7 +204,7 @@
     }
   }
 
-  .d-none {
+  .d-md-none {
     display: none;
   }
 }
@@ -314,6 +314,10 @@
           color: #FFF;
         }
       }
+    }
+
+    .d-md-none {
+      display: block;
     }
   }
 }
