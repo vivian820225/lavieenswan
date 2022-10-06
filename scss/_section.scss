@@ -215,10 +215,16 @@
     gap: 8px;
     margin-bottom: 1rem;
 
+    .subtitle {
+      font-size: clamp(1rem, 3vw, 2rem);
+      font-weight: bold;
+    }
+
     .title,
     .title-en,
     .subtitle {
       margin: 0;
+      white-space: nowrap;
 
       &.white {
         color: $black;
@@ -240,6 +246,12 @@
       img {
         max-height: 100vh;
       }
+    }
+
+    .img-background {
+      background-color: rgba($black, .6);
+      padding: 1.5rem;
+      // border: 2px solid #FFF;
     }
 
     .border {
@@ -267,13 +279,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
         left: 50%;
         transform: translate(-50%, -50%);
 
         .para {
           margin-top: 2rem;
+          margin-bottom: 1rem;
         }
+      }
+
+      &.background {
+        background-color: rgba(#000A2E, .5);
+        padding: 2rem;
+        border: 2px solid #FFF;
       }
     }
 

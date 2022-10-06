@@ -448,10 +448,15 @@ picture {
   gap: 8px;
   margin-bottom: 1rem;
 }
+.s3 .d-flex .subtitle {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: bold;
+}
 .s3 .d-flex .title,
 .s3 .d-flex .title-en,
 .s3 .d-flex .subtitle {
   margin: 0;
+  white-space: nowrap;
 }
 .s3 .d-flex .title.white,
 .s3 .d-flex .title-en.white,
@@ -469,6 +474,10 @@ picture {
   }
   .s3 .img-bg img {
     max-height: 100vh;
+  }
+  .s3 .img-background {
+    background-color: rgba(24, 24, 24, 0.6);
+    padding: 1.5rem;
   }
   .s3 .border {
     margin-bottom: 1.125rem;
@@ -502,13 +511,18 @@ picture {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 1rem;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
   .s3 .content.center .para {
     margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .s3 .content.background {
+    background-color: rgba(0, 10, 46, 0.5);
+    padding: 2rem;
+    border: 2px solid #FFF;
   }
   .s3 .title {
     text-align: left;
