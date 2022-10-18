@@ -143,6 +143,11 @@ picture {
   bottom: 1rem;
   color: #FFF;
   font-size: 0.75rem;
+
+  &.right {
+    left: initial;
+    right: 1rem;
+  }
 }
 
 @media (min-width: 821px) {
