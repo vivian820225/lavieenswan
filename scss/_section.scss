@@ -73,6 +73,29 @@
   .small {
     color: $light-grey;
   }
+
+  .gradient {
+    color: #f1dfb5;
+    background: linear-gradient(45deg, 
+      #f1dfb5 75%,
+      #FFF 80%,
+      #f1dfb5 85%);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradient 1.5s linear infinite;
+  }
+}
+
+@keyframes textGradient {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 200%;
+  }
 }
 
 @media (min-width: 821px) {
