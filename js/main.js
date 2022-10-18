@@ -59,3 +59,15 @@ const swiperS7 = new Swiper("#swiper-s7", {
     prevEl: "#swiper-s7 .swiper-button-prev",
   },
 });
+
+const swiperS8 = new Swiper("#swiper-s8", {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: "#swiper-s8 .swiper-button-next",
+    prevEl: "#swiper-s8 .swiper-button-prev",
+  },
+});
