@@ -456,6 +456,7 @@ picture {
   padding: 0 1.5rem;
 }
 .s3 .title {
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
   text-align: center;
 }
 .s3 .circle-group {
@@ -470,8 +471,14 @@ picture {
   max-width: 100%;
 }
 .s3 .img-flag {
-  max-width: 26px;
+  max-width: 28px;
   height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.s3 .img-flag.jp {
+  -webkit-box-shadow: 0 0 4px rgba(24, 24, 24, 0.2);
+          box-shadow: 0 0 4px rgba(24, 24, 24, 0.2);
 }
 .s3 .img-durgo {
   max-width: 78px;
@@ -480,6 +487,12 @@ picture {
 .s3 .d-flex {
   gap: 8px;
   margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .s3 .d-flex .subtitle {
   font-size: clamp(1rem, 3vw, 2rem);
@@ -495,6 +508,23 @@ picture {
 .s3 .d-flex .title-en.white,
 .s3 .d-flex .subtitle.white {
   color: #181818;
+}
+.s3 ul.list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.s3 ul.list li::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #D1B982;
+  border-radius: 50%;
 }
 .s3 .d-md-none {
   display: none;
@@ -519,7 +549,7 @@ picture {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    max-width: 40vw;
+    max-width: 45vw;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -558,6 +588,7 @@ picture {
     border: 2px solid #FFF;
   }
   .s3 .title {
+    margin-bottom: 2.5rem;
     text-align: left;
   }
   .s3 .para {
@@ -604,13 +635,19 @@ picture {
     background-color: #D1B982;
   }
   .s3 .img-flag {
-    max-width: 52px;
+    max-width: 48px;
   }
   .s3 .img-durgo {
     max-width: 138px;
   }
   .s3 .d-flex {
     gap: 16px;
+    margin: 0;
+  }
+  .s3 .d-flex.d-md-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .s3 .d-flex .title.white,
 .s3 .d-flex .title-en.white {

@@ -210,6 +210,7 @@
   }
   
   .title {
+    font-size: clamp(1.2rem, 5vw, 2.2rem);
     text-align: center;
   }
 
@@ -227,8 +228,13 @@
   }
 
   .img-flag {
-    max-width: 26px;
+    max-width: 28px;
     height: auto;
+    object-fit: contain;
+
+    &.jp {
+      box-shadow: 0 0 4px rgba($black, .2);
+    }
   }
 
   .img-durgo {
@@ -239,6 +245,8 @@
   .d-flex {
     gap: 8px;
     margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
 
     .subtitle {
       font-size: clamp(1rem, 3vw, 2rem);
@@ -253,6 +261,25 @@
 
       &.white {
         color: $black;
+      }
+    }
+  }
+
+  ul {
+    &.list {
+      li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px;
+          margin-right: 10px;
+          background-color: $gold;
+          border-radius: 50%;
+        }
       }
     }
   }
@@ -285,7 +312,7 @@
 
     .content {
       align-items: flex-start;
-      max-width: 40vw;
+      max-width: 45vw;
       margin: 0;
       padding: 0;
       position: absolute;
@@ -321,6 +348,7 @@
     }
 
     .title {
+      margin-bottom: 2.5rem;
       text-align: left;
     }
 
@@ -364,7 +392,7 @@
     }
 
     .img-flag {
-      max-width: 52px;
+      max-width: 48px;
     }
 
     .img-durgo {
@@ -373,6 +401,12 @@
 
     .d-flex {
       gap: 16px;
+      margin: 0;
+
+      &.d-md-left {
+        justify-content: flex-start;
+      }
+
       .title,
       .title-en {
         &.white {
