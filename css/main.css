@@ -509,6 +509,10 @@ picture {
 .s3 .d-flex .subtitle.white {
   color: #181818;
 }
+.s3 ul.list {
+  width: 100%;
+  max-width: 100%;
+}
 .s3 ul.list li {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -267,6 +267,8 @@
 
   ul {
     &.list {
+      width: 100%;
+      max-width: 100%;
       li {
         display: flex;
         align-items: center;
