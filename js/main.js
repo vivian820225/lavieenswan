@@ -1,9 +1,20 @@
 AOS.init();
 
+const swiperS2 = new Swiper("#swiper-s2", {
+  loop: true,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: "#swiper-s2 .swiper-button-next",
+    prevEl: "#swiper-s2 .swiper-button-prev",
+  },
+});
 const swiperS3 = new Swiper("#swiper-s3", {
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   navigation: {
@@ -15,7 +26,7 @@ const swiperS3 = new Swiper("#swiper-s3", {
 const swiperS4 = new Swiper("#swiper-s4", {
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   navigation: {
@@ -27,7 +38,7 @@ const swiperS4 = new Swiper("#swiper-s4", {
 const swiperS5 = new Swiper("#swiper-s5", {
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   navigation: {
@@ -39,7 +50,7 @@ const swiperS5 = new Swiper("#swiper-s5", {
 const swiperS6 = new Swiper("#swiper-s6", {
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   navigation: {
@@ -51,7 +62,7 @@ const swiperS6 = new Swiper("#swiper-s6", {
 const swiperS7 = new Swiper("#swiper-s7", {
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   navigation: {
@@ -63,7 +74,7 @@ const swiperS7 = new Swiper("#swiper-s7", {
 const swiperS8 = new Swiper("#swiper-s8", {
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   navigation: {
