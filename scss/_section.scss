@@ -140,7 +140,7 @@
 }
 
 .s2 {
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
   min-height: auto;
   .img-bg {
     img {
@@ -154,6 +154,9 @@
     align-items: center;
     margin-top: 1rem;
     z-index: 1;
+  }
+  .swiper-slide {
+    padding: 0 1.5rem;
   }
 }
 
@@ -174,9 +177,11 @@
       top: 8rem;
       left: 4rem;
     }
-
     .para {
       max-width: 520px;
+    }
+    .swiper-slide {
+      padding: 0;
     }
   }
 }

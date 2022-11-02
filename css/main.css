@@ -381,7 +381,7 @@ picture {
   }
 }
 .s2 {
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
   min-height: auto;
 }
 .s2 .img-bg img {
@@ -401,6 +401,9 @@ picture {
           align-items: center;
   margin-top: 1rem;
   z-index: 1;
+}
+.s2 .swiper-slide {
+  padding: 0 1.5rem;
 }
 
 @media (min-width: 821px) {
@@ -423,6 +426,9 @@ picture {
   }
   .s2 .para {
     max-width: 520px;
+  }
+  .s2 .swiper-slide {
+    padding: 0;
   }
 }
 .s3 {
