@@ -147,6 +147,12 @@ picture {
   left: initial;
   right: 1rem;
 }
+.img-tag.black {
+  color: #181818;
+}
+.img-tag.shadow {
+  text-shadow: 0 0 4px rgba(24, 24, 24, 0.5);
+}
 
 @media (min-width: 821px) {
   .title {

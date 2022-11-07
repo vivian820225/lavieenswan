@@ -147,6 +147,14 @@ picture {
     left: initial;
     right: 1rem;
   }
+
+  &.black {
+    color: $black;
+  }
+
+  &.shadow {
+    text-shadow: 0 0 4px rgba($black, 0.5);
+  }
 }
 
 @media (min-width: 821px) {
