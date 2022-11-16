@@ -427,7 +427,7 @@ picture {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    top: 8rem;
+    top: clamp(4rem, 10vh, 8rem);
     bottom: initial;
     right: 4rem;
     -webkit-transform: initial;
