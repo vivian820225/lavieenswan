@@ -123,3 +123,58 @@ window.addEventListener("load", function () {
     ImgObserver.observe(dragContainer, { box: "border-box" });
   }
 });
+
+function debounce(func, wait = 10, immediate = true) {
+  let timeout;
+  return function() {
+    let context = this, args = arguments;
+    let later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+// navbar
+const body = document.body
+const navButtons = document.querySelectorAll(".menu-item");
+const header = document.querySelector(".header");
+navButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const section = button.getAttribute('data-href')
+    const target = document.querySelector(section);
+    const positionTop = target.offsetTop - header.clientHeight;
+
+    window.scrollTo({ top: positionTop, behavior: "smooth" });
+  })
+})
+
+let scrollPos = 0;
+let hiddenTimer = null;
+
+function setHeaderVisible() {
+  if (hiddenTimer) {
+    hiddenTimer = clearInterval(hiddenTimer)
+  }
+  let windowY = window.scrollY;
+  if (windowY < scrollPos) {
+    // Scrolling UP
+    header.classList.remove("is-hidden");
+  } else {
+    // Scrolling DOWN
+    header.classList.add("is-hidden");
+  }
+  scrollPos = windowY;
+
+  hiddenTimer = setInterval(function () {
+    header.classList.remove("is-hidden");
+  }, 2 * 1000);
+}
+
+window.addEventListener("scroll", debounce(setHeaderVisible));
+
+
