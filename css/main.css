@@ -390,7 +390,7 @@ picture {
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
-  z-index: 100;
+  z-index: 10;
   opacity: 0;
 }
 .s1 .toast.active {
@@ -1481,11 +1481,10 @@ picture {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #C30D23;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
@@ -1496,6 +1495,7 @@ picture {
           transform: translateY(-100%);
 }
 .header .contact-nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1506,6 +1506,8 @@ picture {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem 1rem;
+  background-color: #C30D23;
+  z-index: 1;
 }
 .header .nav-logo {
   -ms-flex-item-align: center;
@@ -1549,12 +1551,21 @@ picture {
 }
 .header .menu-nav {
   height: 0;
+  background-color: #C30D23;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 .header .menu-nav .menu-list .menu-item {
   display: none;
 }
 .header .menu-nav.show {
   height: auto;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .header .menu-nav.show .menu-list .menu-item {
   display: block;
@@ -1653,6 +1664,8 @@ picture {
   }
   .header .menu-nav {
     height: auto;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .header .menu-nav .menu-list {
     -webkit-box-orient: horizontal;

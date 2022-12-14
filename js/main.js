@@ -184,6 +184,9 @@ function setHeaderVisible() {
   } else {
     // Scrolling DOWN
     header.classList.add("is-hidden");
+    if (menu.classList.contains("show")) {
+      menu.classList.remove("show");
+    }
   }
   scrollPos = windowY;
 
