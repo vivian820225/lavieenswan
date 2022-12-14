@@ -1512,7 +1512,7 @@ picture {
       align-self: center;
   display: block;
   width: auto;
-  height: clamp(32px, 2vw, 80px);
+  height: clamp(40px, 2.5vw, 60px);
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1677,7 +1677,7 @@ picture {
   }
 }
 .main-container {
-  padding-bottom: 64px;
+  padding-bottom: 56px;
 }
 
 @media (min-width: 821px) {
@@ -1732,4 +1732,7 @@ picture {
   .footer {
     display: none;
   }
+}
+.btn-scroll {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

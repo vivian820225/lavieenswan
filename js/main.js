@@ -143,11 +143,28 @@ function debounce(func, wait = 10, immediate = true) {
 const body = document.body
 const navButtons = document.querySelectorAll(".btn-scroll");
 const header = document.querySelector(".header");
+const menuButton = document.querySelector(".menu-button");
+const menu = document.querySelector(".menu-nav");
+
+menuButton.addEventListener("touchstart", (e) => {
+  if (e.cancelable) e.preventDefault();
+  menu.classList.toggle('show')
+});
+
+menuButton.addEventListener("click", (e) => {
+  if (e.cancelable) e.preventDefault();
+  menu.classList.toggle("show");
+});
+
 navButtons.forEach(button => {
   button.addEventListener('click', function() {
     const section = button.getAttribute('data-href')
-    const target = document.querySelector(section);
-    const positionTop = target.offsetTop;
+    const target = document.querySelector(section) || null;
+    const positionTop = target ? target.offsetTop : body.scrollHeight;
+
+    if (menu.classList.contains('show')) {
+      menu.classList.remove('show')
+    }
 
     window.scrollTo({ top: positionTop, behavior: "smooth" });
   })
