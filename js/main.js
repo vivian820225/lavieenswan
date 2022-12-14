@@ -141,13 +141,13 @@ function debounce(func, wait = 10, immediate = true) {
 
 // navbar
 const body = document.body
-const navButtons = document.querySelectorAll(".menu-item");
+const navButtons = document.querySelectorAll(".btn-scroll");
 const header = document.querySelector(".header");
 navButtons.forEach(button => {
   button.addEventListener('click', function() {
     const section = button.getAttribute('data-href')
     const target = document.querySelector(section);
-    const positionTop = target.offsetTop - header.clientHeight;
+    const positionTop = target.offsetTop;
 
     window.scrollTo({ top: positionTop, behavior: "smooth" });
   })
