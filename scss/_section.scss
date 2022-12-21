@@ -41,6 +41,7 @@
 
   .logo {
     margin-bottom: 1.25rem;
+    max-width: clamp(264px, 32vw, 525px);
   }
 
   .divider {
@@ -106,6 +107,10 @@
 
     .large {
       margin-bottom: 5.5rem;
+    }
+
+    .content {
+      padding-top: 4.5rem;
     }
   }
 }

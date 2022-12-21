@@ -278,6 +278,7 @@ picture {
 }
 .s0 .logo {
   margin-bottom: 1.25rem;
+  max-width: clamp(264px, 32vw, 525px);
 }
 .s0 .divider {
   margin: 0 10px;
@@ -350,6 +351,9 @@ picture {
   }
   .s0 .large {
     margin-bottom: 5.5rem;
+  }
+  .s0 .content {
+    padding-top: 4.5rem;
   }
 }
 .s1 .horizontal-scroll-container {
@@ -1584,7 +1588,7 @@ picture {
   display: block;
   width: 100%;
   max-width: 100%;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   font-size: clamp(0.75rem, 2vw, 1.25rem);
   text-align: center;
   color: #FFF;
@@ -1642,8 +1646,8 @@ picture {
     gap: 4px;
     padding: 0 1rem;
     font-size: 1rem;
-    height: 60px;
-    line-height: 60px;
+    height: 52px;
+    line-height: 52px;
     color: #FFF;
     cursor: pointer;
   }
