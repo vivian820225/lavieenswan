@@ -1510,7 +1510,7 @@ picture {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #C30D23;
+  background-color: #d9c26f;
   z-index: 1;
 }
 .header .nav-logo {
@@ -1531,7 +1531,7 @@ picture {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: clamp(0.85rem, 2vw, 1.5rem);
-  color: #FFF;
+  color: #870000;
 }
 .header .contact-list {
   display: none;
@@ -1555,7 +1555,7 @@ picture {
 }
 .header .menu-nav {
   height: 0;
-  background-color: #C30D23;
+  background-color: #d9c26f;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.2s ease-in;
@@ -1589,14 +1589,14 @@ picture {
   width: 100%;
   max-width: 100%;
   padding: 0.75rem 1rem;
-  font-size: clamp(0.75rem, 2vw, 1.25rem);
+  font-size: clamp(0.85rem, 2vw, 1.25rem);
   text-align: center;
-  color: #FFF;
+  color: #870000;
   border-top: 1px solid #f1dfb5;
   cursor: pointer;
 }
 .header .menu-list .menu-item:hover {
-  color: #f1dfb5;
+  color: #C30D23;
   text-decoration: none;
 }
 

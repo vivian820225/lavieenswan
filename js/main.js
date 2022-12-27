@@ -147,14 +147,17 @@ const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu-nav");
 
 menuButton.addEventListener("touchstart", (e) => {
-  if (e.cancelable) e.preventDefault();
   menu.classList.toggle('show')
-});
+}, false);
+
+menuButton.addEventListener("touchend", (e) => {
+  e.preventDefault();
+}, false);
 
 menuButton.addEventListener("click", (e) => {
-  if (e.cancelable) e.preventDefault();
+  e.preventDefault();
   menu.classList.toggle("show");
-});
+}, false);
 
 navButtons.forEach(button => {
   button.addEventListener('click', function() {
