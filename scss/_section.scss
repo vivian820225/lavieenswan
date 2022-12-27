@@ -200,10 +200,14 @@
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
+    padding: 0 1.5rem;
     z-index: 1;
   }
   .swiper-slide {
     padding: 0 1.5rem;
+    .content {
+      display: none;
+    }
   }
 }
 
@@ -215,20 +219,25 @@
         max-height: 100vh;
       }
     }
-    .content {
-      max-width: 40vw;
-      margin: 0;
-      color: #FFF;
-      align-items: flex-start;
-      position: absolute;
-      top: 8rem;
-      left: 4rem;
-    }
     .para {
       max-width: 520px;
     }
+    .content {
+      display: none;
+    }
     .swiper-slide {
       padding: 0;
+      .content {
+        display: flex;
+        max-width: 40vw;
+        margin: 0;
+        padding: 0;
+        color: #FFF;
+        align-items: flex-start;
+        position: absolute;
+        top: 8rem;
+        left: 4rem;
+      }
     }
   }
 }

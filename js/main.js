@@ -82,6 +82,17 @@ const swiperS8 = new Swiper("#swiper-s8", {
     prevEl: "#swiper-s8 .swiper-button-prev",
   },
 });
+const swiperS10 = new Swiper("#swiper-s10", {
+  loop: true,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: "#swiper-s10 .swiper-button-next",
+    prevEl: "#swiper-s10 .swiper-button-prev",
+  },
+});
 
 let timer = null;
 let callback = ([entry]) => {
